@@ -9,3 +9,6 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use("/", indexRouter);
 mongoose.connect(process.env.DB).then(() => console.log("Connected!"));
+app.listen(PORT, () => {
+  console.log("app is runing");
+});
